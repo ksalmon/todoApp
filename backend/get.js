@@ -11,6 +11,7 @@ module.exports.run = async (event) => {
   }
 
   const result = await client.get(params).promise();
+  console.log(result)
   if (result.Item) {
     return {
       statusCode: 200,
